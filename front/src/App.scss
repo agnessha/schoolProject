@@ -1,0 +1,208 @@
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(./fonts/RibeyeMarrow-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap) format('woff');
+}
+* {
+  box-sizing: border-box;
+}
+.App{
+  /*font-family: 'Roboto', sans-serif;*/
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+//Header
+
+.header{
+  color: #FDFDFD;
+  width: 100%;
+  align-items: center;
+  height: 44px;
+  padding: 0 60px 0 45px;
+  z-index: 99;
+  &Title{
+    padding: 5px 20px;
+    font-size: 40px;
+    text-shadow: 5px 5px 5px #B21BE9;
+    &:first-letter{
+      font-weight: bold;
+    }
+  }
+  &Links{
+    display: inline;
+    padding: 8px 0 10px 0;
+
+  }
+  &Notes{
+    font-size: 19px;
+    padding: 20px 20px;
+    text-shadow: 5px 5px 5px #B21BE9;
+    transition: text-shadow 0.5s ease-in-out;
+    &:hover{
+      text-shadow: 10px 10px 10px black;
+    }
+  }
+  &Calendar{
+    font-size: 19px;
+    padding: 20px 20px;
+    text-shadow: 5px 5px 5px #B21BE9;
+    transition: text-shadow 0.5s ease-in-out;
+    &:hover{
+      text-shadow: 10px 10px 10px black;
+    }
+  }
+  &Logout{
+    font-size: 19px;
+    padding: 20px 20px;
+    text-shadow: 5px 5px 5px #B21BE9;
+    transition: text-shadow 0.5s ease-in-out;
+    &:hover{
+      text-shadow: 10px 10px 10px black;
+    }
+  }
+}
+
+//Notes
+
+.today{
+  margin-left: 18%;
+  transition: margin-left .25s cubic-bezier(.4,0,.2,1);
+  padding: 40px 20px;
+  height: calc(100vh);
+  &Bold{
+    font-weight: 500;
+    color: #FDFDFD;
+    padding-right: 10px;
+  }
+}
+.today.big{
+  margin-left: 0;
+  transition: margin-left .25s cubic-bezier(.4,0,.2,1);
+
+}
+.todayInner{
+  max-width: 800px;
+  margin: 0 auto;
+  &Date{
+    font-weight: 100;
+    display: inline-block;
+    color: #FDFDFD;
+  }
+  &Header{
+    padding: 60px 20px 40px;
+  }
+}
+.addNote{
+  display: inline-block;
+  right: 0;
+
+}
+
+@media (max-width: 768px) {
+  .today{
+    margin-left: 0!important;
+    transition: margin-left .25s cubic-bezier(.4,0,.2,1);
+    padding: 40px 20px;
+    height: calc(100vh);
+    &Bold{
+      font-weight: 500;
+      padding-right: 10px;
+    }
+  }
+  .today.big{
+    margin-left: 0;
+    transition: margin-left .25s cubic-bezier(.4,0,.2,1);
+
+  }
+}
+
+.notes{
+  cursor: pointer
+}
+
+
+
+.calendarIcon{
+  border: 2px solid white;
+  border-radius: 7px;
+  width: 20px;
+  height: 21px;
+  font-size: 11px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+}
+
+
+
+.noteInput{
+  border: 2px #D0B8AC solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.logo{
+  width: 100px;
+}
+
+.calendar{
+  width: 80%;
+  margin: 0 auto;
+  height: 45em;
+  color: white;
+}
+.fc .fc-toolbar.fc-header-toolbar{
+  margin-top: 80px;
+}
+.fc-h-event{
+  background-color: #ffff!important;
+  border: 3px #ffff!important;
+  .fc-event-title{
+    color: black;
+    font-size: 18px;
+  }
+}
+
+//Editor
+
+.DraftEditor-root {
+  position: relative;
+  border: 1px solid #F1F1F1;
+  padding: 5px 10px;
+}
+
+
+.login{
+  margin: 15em 44%;
+  color: #F1F1F1;
+  & svg{
+    font-size: 50px;
+  }
+  &Btn{
+    display: flex;
+  }
+}
+
+.spinner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+
+}
+
+.fc .fc-view-harness-active {
+  height: 550px !important;
+}
